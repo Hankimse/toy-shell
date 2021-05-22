@@ -1,4 +1,6 @@
 # toy-shell
+자동차IT융합 20163364 김세한
+
 My code is compiled in Linux
 
 char* USERNAME=getenv("USER");  // getenv searches for the environment string pointed to by name and returns the associated value to the string
