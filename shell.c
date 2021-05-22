@@ -19,7 +19,13 @@ int main(void)
         char *s;
         int len;
         
-        printf("MyShell $ ");
+        char* USERNAME = getenv("USER");
+        char HOSTNAME[1000];
+        gethostname(HOSTNAME, 999);
+        char cwd[1000];
+        getcwd(cwd, sizeof(cwd));
+        prinf("%s@%s%s$", USERNAME, HOSTNAME, cwd);
+        
         s = fgets(command, MAX_LEN_LINE, stdin);
         if (s == NULL) {
             fprintf(stderr, "fgets failed\n");
